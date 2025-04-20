@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYDRA PAGE</title>
+  <!-- Include Tailwind CSS via CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- font awesom cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(10);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .animate-float {
+      animation: float 2s ease-in-out infinite;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .logo-slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+    }
+
+    @keyframes zoomBackground {
+      0% {
+        background-size: 100%;
+      }
+
+      50% {
+        background-size: 120%;
+      }
+
+      100% {
+        background-size: 100%;
+      }
+    }
+
+    .logo-slide-track {
+      animation: scroll 30s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+
+    .logo-slide {
+      width: 250px;
+      /* height: 100px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .logo-slide img {
+      padding: 2px !important;
+      max-width: 100%;
+      max-height: 150px;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .logo-slide:hover img {
+      filter: grayscale(0);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+
+    /* Gradient overlays to create fade effect on edges */
+  </style>
+</head>
+
+<body class="bg-[#302c42] ">
+  <nav class="bg-[#302c42] px-8 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-4  animate__animated animate__shakeX">
+      <img class="h-[90px]" src="./Assets/Vector (1).png" alt="" />
+      <img class="h-[50px]" src="./Assets/Frame.png" alt="" />
+    </div>
+    <div
+      class="hidden xl:flex gap-8 items-center text-white font-semibold xl:block   animate__animated animate__backInDown">
+      <a clas="hover:text-[#C0B7E8]" href="">ABOUT</a>
+      <a clas="" href="">SERVICES</a>
+      <a clas="" href="">TECHNOLOGIES</a>
+      <a clas="" href="">HOW TO</a>
+    </div>
+    <div class="sm:flex items-center gap-4 hidden sm:block">
+      <button class="px-4 text-white py-2 border border-white border-[1.5px] rounded-xl font-semibold">
+        CONTACT US
+      </button>
+      <button class="px-4 py-2 bg-[#877db5]  text-white rounded-xl font-semibold">
+        JOIN HYDRAS
+      </button>
+    </div>
+    <div class="block sm:hidden">
+      <i id="menu" class="fa-solid fa-bars block text-white text-2xl cursor-pointer"></i>
+    </div>
+  </nav>
+  <div id="mobile-view" class="bg-[#302c42] hidden">
+    <div class="relative flex flex-col justify-center gap-8 text-white font-semibold ">
+      <i id="close-menu" class="fa-solid fa-xmark absolute top-4 right-4 text-2xl cursor-pointer"></i>
+      <a class="hover:bg-[#877db5] p-4" href="">ABOUT</a>
+      <a class="hover:bg-[#877db5] p-4" href="">SERVICES</a>
+      <a class="hover:bg-[#877db5] p-4" href="">TECHNOLOGIES</a>
+      <a class="hover:bg-[#877db5] p-4" href="">HOW TO</a>
+    </div>
+    <div class="flex items-center gap-4 m-4 pb-4">
+      <button class="px-4 text-white py-2 border border-white border-[1.5px] rounded-xl font-semibold">
+        CONTACT US
+      </button>
+      <button class="px-4 py-2 bg-[#877db5] rounded-xl  text-white  text-center">
+        JOIN HYDRAS
+      </button>
+    </div>
+  </div>
+  <header class="bg-[#302c42] px-6 md:px-10 py-12  grid-row-2 grid lg:grid-cols-[40%_50%] gap-12 items-center">
+    <div class="space-y-6 lg:space-y-8 w-full" data-aos="fade-right" data-aos-duration="2000">
+      <h1 class="text-3xl xl:text-6xl font-bold text-[#877db5] lg:text-4xl md:text-4xl sm:text-3xl">
+        Dive <span class="text-white">Into The Depths Of </span> Virtual
+        Reality
+      </h1>
+      <p class="text-white text-md">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ex quam
+        consequatur voluptas molestias? Fugit labore maxime quibusdam
+        consequuntur velit cupiditate ipsa molestiae, impedit pariatur tenetur
+        tempora nostrum corrupti consequatur debitis fugiat at, natus et
+        laudantium necessitatibus sit. Itaque distinctio fitatis autem, enim
+        accusamus ab laudantium, modi repellat rem explicabo adipisci tenetur,
+        recusandae deleniti accusantium obc.
+      </p>
+      <div class="flex items-center gap-4">
+        <button class="px-6 py-3 bg-[#877db5] rounded-xl font-semibold text-white hover:bg-[#7668a4] transition-colors">
+          BUILD YOUR WORLD</button><i class="fa-solid fa-arrow-right text-[#C0B7E8] text-3xl"></i>
+      </div>
+    </div>
+    <div class="flex justify-end items-center">
+      <img class="sm:w-[80%] animate-float mx-auto lg:mx-0" src="./Assets/Group 4@2x.png" alt="Virtual Reality Illustration" />
+    </div>
+
+  </header>
+  <div class="bg-[#302c42] flex justify-center px-12 py-12">
+    <div
+      class="rounded-xl bg-[radial-gradient(circle,rgba(58,52,86,1)_0%,rgba(33,30,46,1)_100%)] p-6 w-full max-w-7xl  "
+      data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-6">
+        <div class="grid grid-cols-[60px_1fr] sm:grid-cols-[60px_290px] gap-4 ">
+          <img src="./Assets/Location-Icon.png" alt="Location Icon" class="">
+          <div>
+            <h3 class="text-xl sm:text-2xl text-white font-semibold">Pay Us a Visit</h3>
+            <p class="text-white font-light text-sm sm:text-base">Union St, Seattle, WA 98101, United States</p>
+          </div>
+        </div>
+
+        <img src="./Assets/Vector 5.png" alt="" class="hidden lg:block h-20">
+
+        <div class="grid grid-cols-[60px_1fr] sm:grid-cols-[60px_290px] gap-4 pr-6 sm:pr-0 ">
+          <img src="./Assets/shape.png" alt="Phone Icon" class="">
+          <div>
+            <h3 class="text-xl sm:text-2xl text-white font-semibold">Give Us a Call</h3>
+            <p class="text-white font-light text-sm sm:text-base">(110) 1111-1010</p>
+          </div>
+        </div>
+
+        <img src="./Assets/Vector 5.png" alt="" class="hidden lg:block h-20">
+        <div class="grid grid-cols-[60px_1fr] sm:grid-cols-[60px_290px] gap-4 pr-6 sm:pr-0 ">
+          <img src="./Assets/mail.png" alt="Phone Icon" class="">
+          <div>
+            <h3 class="text-xl sm:text-2xl text-white font-semibold">Send Us Message</h3>
+            <p class="text-white font-light text-sm sm:text-base">abc@gmail.com</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="bg-[#302c42] px-10 lg:px-24  lg:grid grid-cols-2 py-24" data-aos="fade-left"
+    data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="2000">
+    <div>
+      <h1 class="text-white font-bold text-3xl lg:text-4xl">INTRODUCTION</h1>
+      <div class="flex items-center gap-4 mb-8">
+        <p class="text-light text-[#E8D8D8] text-3xl gap-4">TO HYDRA VR </p> <img class="hidden sm:block w-[10%]"
+          src="./Assets/Component 1.png" alt="" class="w-[20%]">
+      </div>
+    </div>
+    <p class="text-white text-md row-start-1 col-start-2">Vitae sapien pellentesque habitant morbi tristique senectus et
+      netus et. Feugiat
+      nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
+      quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+      lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Beatae natus temporibus molestiae facilis laudantium nostrum cum assumenda quis
+      voluptas quidem deleniti, alias hic sint! Accusamus iste quis consectetur enim amet. </p>
+  </div>
+  <div class="bg-[#302c42] borde">
+    <div class="bg-[image:url('./Assets/Group%205.png')] bg-cover p-36  xl:grid grid-cols-[60%_40%] px-10 lg:px-24">
+      <img class="animate-float mx-auto xl:mx-0" src="./Assets/Mask group.png" alt="">
+      <div class="flex flex-col justify-center gap-12" data-aos="fade-right" data-aos-duration="2000">
+        <div class="flex flex-col gap-4">
+          <h1 class="text-3xl xl:text-6xl font-bold text-white lg:text-4xl md:text-4xl sm:text-3xl">
+            ABOUT
+          </h1>
+          <span class="text-light text-[#E8D8D8] text-3xl ">TO HYDRA VR </span>
+        </div>
+        <p class="text-white text-md">
+          Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
+          urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
+          dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in.
+          Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet
+          sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
+          etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet
+          cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha
+          retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
+          n tempor.
+        </p>
+        <div class="flex items-center gap-4">
+          <button
+            class=" p-5 bg-[#877db5] rounded-xl font-semibold text-white hover:bg-[#7668a4] transition-colors lg:px-6 py-3">
+            LET’S GET IN TOUCH</button><i class="fa-solid fa-arrow-right text-[#C0B7E8] text-3xl"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="bg-[#302c42] px-10 lg:px-24  lg:grid grid-cols-2 py-24" data-aos="fade-left" data-aos-duration="2000">
+    <div>
+      <h1 class="text-white font-bold text-3xl lg:text-4xl">WHY BUILD</h1>
+      <div class="flex items-center gap-4 mb-8">
+        <p class="text-light text-[#E8D8D8] text-3xl gap-4">WITH HYDRA? </p> <img class="hidden sm:block w-[10%]"
+          src="./Assets/Component 1.png" alt="" class="w-[20%]">
+      </div>
+    </div>
+    <p class="text-white text-md row-start-1 col-start-2">Vitae sapien pellentesque habitant morbi tristique senectus et
+      netus et. Feugiat
+      nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
+      quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+      lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae. Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Beatae natus temporibus molestiae facilis laudantium nostrum cum assumenda quis
+      voluptas quidem deleniti, alias hic sint! Accusamus iste quis consectetur enim amet. </p>
+  </div>
+
+  <div id="card"
+    class="bg-[#302c42] grid grid-cols-1 gap-6 px-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-[20%_20%_20%_20%] items-center justify-center py-12 gap-12 sm:px-6 md:px-8 lg:px-12 xl:px-16 gap-y-8"
+    data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+
+  </div>
+
+  </div>
+  <div class="bg-[#302c42] py-16">
+    <div id="bg"
+      class="bg-[url('Assets/pexels-rodnae-productions-8097332%201.png')] animate-zoomBackground bg-no-repeat pt-20 bg-cover bg-[position:50%_30%] rounded-xl max-w-7xl max-h-[custom-value] mx-auto flex flex-col gap-2 items-center justify-center px-4 sm:px-6 lg:px-8">
+      <h1 class=" md:text-5xl lg:text-5xl text-center font-bold text-white leading-tight">TECHNOLOGIES & HARDWARE</h1>
+      <p class="text-3xl md:text-4xl lg:text-5xl font-light text-gray-500 text-center">USED BY HYDRA VR.</p>
+      <div class="bg-[#8176AF] rounded-full border border-white cursor-pointer "><i
+          class="fa-solid fa-caret-down text-[#433D60] px-3 py-2 text-2xl "></i></div>
+    </div>
+  </div>
+
+  <!-- slider  -->
+
+  <div class=" mx-auto bg-[#302c42] rounded-lg shadow-md  ">
+
+
+    <div class="logo-slider bg-[#302c42]">
+      <div class="logo-slide-track bg-[#302c42]">
+        <!-- First set of logos -->
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech1 1.png" alt="IngramSpark" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech2 1.png" alt="Google Play Books" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech3 1.png" alt="Amazon" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech4 1.png" alt="Hoopla" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech1 1.png" alt="IngramSpark" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech2 1.png" alt="Google Play Books" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech3 1.png" alt="Amazon" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech4 1.png" alt="Hoopla" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech1 1.png" alt="IngramSpark" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech2 1.png" alt="Google Play Books" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech3 1.png" alt="Amazon" />
+        </div>
+        <div class="logo-slide">
+          <img src="./Assets/Hydra-Tech4 1.png" alt="Hoopla" />
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#302c42] px-10 lg:px-24  lg:grid grid-cols-2 py-24" data-aos="fade-top" data-aos-duration="2000">
+    <div>
+      <h1 class="text-white font-bold text-3xl lg:text-4xl">HOW WE BUILD</h1>
+      <div class="flex items-center gap-4 mb-8">
+        <p class="text-light text-[#E8D8D8] text-3xl gap-4">WITH HYDRA VR? </p> <img class="hidden sm:block w-[10%]"
+          src="./Assets/Component 1.png" alt="" class="w-[20%]">
+      </div>
+    </div>
+    <p class="text-white text-md row-start-1 col-start-2">Vsit amet tellus. Ornare
+      Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
+      nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
+      quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+      lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae. eget sit amet tellus. Ornare
+      lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae. </p>
+  </div>
+  <div id="circle"
+    class="xl:bg-[url('./Assets/Vector%2015.png')] bg-cover grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 justify-items-center items-center  "
+    data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+    <div class="flex flex-col  justify-center items-center xl:relative top-14 ">
+      <div
+        class="rounded-full bg-[linear-gradient(90deg,rgba(192,183,232,1)_0%,rgba(129,118,175,1)_100%)] border border-[#252231] border-[16px] text-6xl  font-bold  p-8">
+        01</div>
+      <div class="flex justify-center items-center gap-2"><img src="./Assets/arrow-small-right.png" alt="">
+        <p class="text-xl font-bold text-white ">3D Conception
+          & Design</p>
+      </div>
+    </div>
+    <div class="flex flex-col  justify-center items-center  xl:relative top-8 ">
+      <div
+        class="rounded-full bg-[linear-gradient(90deg,rgba(192,183,232,1)_0%,rgba(129,118,175,1)_100%)] border border-[#252231] border-[16px] text-6xl  font-bold  p-8">
+        02</div>
+      <div class="flex justify-center items-center gap-2"><img src="./Assets/arrow-small-right.png" alt="">
+        <p class="text-xl font-bold text-white ">Interaction
+          Design</p>
+      </div>
+    </div>
+    <div class="flex flex-col  justify-center items-center xl:relative left-30  bottom-14  ">
+      <div
+        class="rounded-full bg-[linear-gradient(90deg,rgba(192,183,232,1)_0%,rgba(129,118,175,1)_100%)] border border-[#252231] border-[16px] text-6xl  font-bold  p-8">
+        03</div>
+      <div class="flex justify-center items-center gap-2"><img src="./Assets/arrow-small-right.png" alt="">
+        <p class="text-xl font-bold text-white ">VR World
+          User Testing</p>
+      </div>
+    </div>
+    <div class="flex flex-col  justify-center items-center  xl:relative top-26 left-18 ">
+      <div
+        class="rounded-full bg-[linear-gradient(90deg,rgba(192,183,232,1)_0%,rgba(129,118,175,1)_100%)] border border-[#252231] border-[16px] text-6xl  font-bold  p-8">
+        04</div>
+      <div class="flex justify-center items-center gap-2"><img src="./Assets/arrow-small-right.png" alt="">
+        <p class="text-xl font-bold text-white ">Hydra VR
+          Deploy</p>
+      </div>
+    </div>
+  </div>
+  <div class="lg:px-70 ">
+    <div
+      class="bg-[radial-gradient(circle,rgba(64,58,95,1)_0%,rgba(33,30,46,1)_100%)] px-8 sm:px-16 lg:px-20 py-12  my-24 rounded-xl flex flex-col items-center"
+      data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl text-center font-bold text-white">JOIN HYDRA</h2>
+      <img class="mt-4" src="./Assets/Vector 16.png" alt="">
+      <p class="text-2xl sm:text-3xl lg:text-4xl font-light text-white mt-4">Let’s Build Your VR Experience</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-8 px-4 sm:px-8 lg:px-16">
+        <input class="rounded-lg p-4 border border-white bg-transparent text-white placeholder-white" type="text"
+          placeholder="First Name">
+        <input class="rounded-lg p-4 border border-white bg-transparent text-white placeholder-white" type="text"
+          placeholder="Last Name">
+        <input class="rounded-lg p-4 border border-white bg-transparent text-white placeholder-white" type="text"
+          placeholder="Email">
+        <input class="rounded-lg p-4 border border-white bg-transparent text-white placeholder-white" type="text"
+          placeholder="Phone Number ">
+        <input
+          class="rounded-lg p-4 border border-white bg-transparent text-white placeholder-white col-span-1 sm:col-span-2 row-span-3 "
+          type="text" placeholder="Subject">
+        <textarea
+          class="rounded-lg p-4 border border-white bg-transparent text-white placeholder-white col-span-1 sm:col-span-2 h-24 sm:h-32 lg:h-40 resize-none"
+          placeholder="Tell Us Something"></textarea>
+      </div>
+      <button
+        class="bg-[linear-gradient(90deg,rgba(192,183,232,1)_0%,rgba(129,118,175,1)_100%)] font-semibold rounded-xl px-6 py-3 text-white mt-8 hover:opacity-90 transition-opacity">
+        SEND TO HYDRA
+      </button>
+    </div>
+  </div>
+  <footer class="grid grid-cols-1 mx-auto    lg:grid-cols-[10%_4%_10%_4%_10%_4%_15%] mt-12  justify-center items-center gap-18  ">
+    <div class="mx-auto lg:mx-0"><img class="h-40" src="./Assets/Vector (1).png" alt=""></div>
+    <div class="hidden lg:block" ><img src="./Assets/Vector 20.png" alt=""></div>
+    <div>
+      <ul class="text-white text-xl flex flex-col gap-4  items-center ">
+        <li>ABOUT</li>
+        <li>SERVICES</li>
+        <li>TECHNOLOGIES</li>
+        <li>HOW TO</li>
+        <li>JOIN HYDRA</li>
+      </ul>
+    </div>
+    <div class="hidden lg:block" ><img src="./Assets/Vector 20.png" alt=""></div>
+    <div>
+
+      <ul class="text-white text-xl flex flex-col gap-4 items-center justify-center    ">
+        <li>F.A.Q</li>
+        <li>SITEMAP</li>
+        <li>CONDITIONS</li>
+        <li>LICENSES</li>
+
+      </ul>
+
+    </div>
+    <div class="hidden lg:block" ><img src="./Assets/Vector 20.png" alt=""></div>
+    <div class="flex flex-col  justify-center gap-4">
+      <h2 class="text-xl font-bold text-white text-center lg:text-left ">SOCIALIZE WITH HYDRA</h2>
+      <div class="flex items-center justify-center gap-4">
+        <a class="bg-[#C0B7E8] rounded-full py-3 px-3 flex items-center transition-all hover:scale-x-105 transform origin-left duration-300 ease-in-out"
+          href=""><i class="fa-brands fa-instagram text-xl  "></i></a>
+        <a class="bg-[#C0B7E8] rounded-full py-3 px-3 flex items-center transition-all hover:scale-x-105 transform origin-left duration-300 ease-in-out"
+          href=""><i class="fa-brands fa-x-twitter text-xl  "></i></a>
+        <a class="bg-[#C0B7E8] rounded-full py-3 px-3 flex items-center transition-all hover:scale-x-105 transform origin-left duration-300 ease-in-out"
+          href=""><i class="fa-brands fa-facebook text-xl  "></i></a>
+        <a class="bg-[#C0B7E8] rounded-full py-3 px-3 flex items-center transition-all hover:scale-x-105 transform origin-left duration-300 ease-in-out"
+          href=""><i class="fa-brands fa-youtube text-xl  "></i></a>
+        <a class="bg-[#C0B7E8] rounded-full py-3 px-3 flex items-center transition-all hover:scale-x-105 transform origin-left duration-300 ease-in-out"
+          href=""><i class="fa-brands fa-tiktok text-xl  "></i></a>
+      </div>
+      <button
+        class="bg-[linear-gradient(90deg,rgba(192,183,232,1)_0%,rgba(129,118,175,1)_100%)] rounded-xl px-4 py-2 max-w-8xl mx-auto lg:mx-0 ">BUILD
+        YOUR WORLD</button>
+    </div>
+  </footer>
+  <div class="p-12 flex flex-col items-center justify-center gap-4">
+    <img src="./Assets/Vector 17.png" alt="">
+    <p class="text-white text-xl font-semibold">2025 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED
+    </p>
+  </div>
+  <script>
+    let menu = document.getElementById("menu");
+    let closeMenu = document.getElementById("close-menu");
+    let mobileView = document.getElementById("mobile-view");
+
+    menu.addEventListener("click", () => {
+      mobileView.classList.remove("hidden");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      mobileView.classList.add("hidden");
+    });
+
+    // Handle responsive behavior
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 640) {
+        // sm breakpoint
+        mobileView.classList.add("hidden");
+      }
+    });
+
+    // card duplicate
+    let card = document.getElementById("card");
+    let data = [
+      {
+        title: "SIMULATION",
+        img: "./Assets/Group 6.png",
+        desc: "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus  libero justo laoreet sit amet vitae."
+      },
+      {
+        title: "EDUCATION",
+        img: "./Assets/Group 7.png",
+        desc: "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae."
+      },
+      {
+        title: "SIMULAT",
+        img: "./Assets/Group 8.png",
+        desc: "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.."
+      },
+      {
+        title: "SIMULATION",
+        img: "./Assets/Group 9.png",
+        desc: "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae."
+      },
+    ]
+    data.map((val, index) => {
+      card.innerHTML += ` <div class="bg-[radial-gradient(circle,rgba(67,61,96,1)_0%,rgba(33,30,46,1)_100%)] flex flex-col  justify-center items-center space-y-6   py-8 rounded-xl">
+      <img class="hover:scale-110 transition-transform duration-300" src="${val.img}" alt="">
+      <h1 class="text-3xl font-bold text-white">${val.title}</h1>
+        <img src="./Vector 10.png" alt="">
+        <p class="text-white text-light text-center text-sm  px-6">${val.desc}</p>
+          <button class="text-white rounded-lg px-4 py-2 bg-[#7668a4] font-semibold ">TRY IT NOW</button>
+          </div>`
+    });
+
+    // JavaScript for additional functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.querySelector('.logo-slide-track');
+
+      // Pause animation on hover
+      track.addEventListener('mouseenter', function () {
+        this.style.animationPlayState = 'paused';
+      });
+
+      // Resume animation on mouse leave
+      track.addEventListener('mouseleave', function () {
+        this.style.animationPlayState = 'running';
+      });
+
+      // You can add additional JavaScript for more functionality if needed
+      // For example, touch events for mobile
+      track.addEventListener('touchstart', function () {
+        this.style.animationPlayState = 'paused';
+      });
+
+      track.addEventListener('touchend', function () {
+        this.style.animationPlayState = 'running';
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
+
+<img src="./Assets/" alt="">
